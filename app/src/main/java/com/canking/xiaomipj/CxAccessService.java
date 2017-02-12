@@ -1,6 +1,5 @@
 package com.canking.xiaomipj;
 
-import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
@@ -33,6 +32,8 @@ public class CxAccessService extends BaseAccessService {
                         boolean access = clickByText(nodeInfo, "显示悬浮窗");
                         XLogger.i("access" + access);
                     }
+                }else {
+                    XLogger.i("not com.miui.permcenter.permissions.AppPermissionsEditorActivity");
                 }
                 if (clazzName.equals("miui.app.AlertDialog")) {
                     end = clickByText(nodeInfo, "允许");
